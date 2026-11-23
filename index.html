@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="tsparticles"></div>
 
 <header class="site-header">
   <div class="wrap">
@@ -26,8 +27,13 @@
 
   <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
 
-  <h1>「効くと言われる手法」を、固定ルールで測り直す</h1>
-  <p class="lead">このサイトは、トレード手法を後付けの解釈が入らない固定ルールに落とし込み、過去データで測った結果を公開する検証サイトです。良い結果だけでなく、<strong>マイナスだった結果、件数が足りなかった結果、「優位性なし」と判定した手法も、同じ書式で全部載せます。</strong></p>
+  <section class="hero">
+    <div class="hero-visual"><canvas id="zdog-hero" width="280" height="280"></canvas></div>
+    <div class="hero-copy">
+      <h1>「効くと言われる手法」を、<span class="hl">固定ルールで測り直す</span></h1>
+      <p class="lead">このサイトは、トレード手法を後付けの解釈が入らない固定ルールに落とし込み、過去データで測った結果を公開する検証サイトです。良い結果だけでなく、<strong>マイナスだった結果、件数が足りなかった結果、「優位性なし」と判定した手法も、同じ書式で全部載せます。</strong></p>
+    </div>
+  </section>
   <p>検証の約束は3つです。（1）ルールは測る前に固定する。（2）コスト（スプレッド・手数料）を差し引いたネットの数字で報告する。（3）悪い結果から先に書く。数字には常に対象期間と件数を添えます。</p>
 
   <h2 id="articles">検証記事</h2>
@@ -97,5 +103,8 @@
   </footer>
 
 </div>
+<script src="particles.bundle.js"></script>
+<script src="zdog.min.js"></script>
+<script src="fx.js"></script>
 </body>
 </html>
