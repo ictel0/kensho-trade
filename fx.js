@@ -93,7 +93,7 @@
   }
 
   /* ---------- スクロール・リビール ---------- */
-  var targets = document.querySelectorAll('.card, .verdict-box, .table-scroll, .pr-note');
+  var targets = document.querySelectorAll('.card, .verdict-box, .table-scroll, .pr-note, .viz, .kpi');
   if ('IntersectionObserver' in window && targets.length) {
     targets.forEach(function (el) { el.classList.add('reveal'); });
     var io = new IntersectionObserver(function (entries) {
