@@ -6,6 +6,17 @@
 <title>検証ラボ | 手法を固定ルールで測る検証サイト</title>
 <meta name="description" content="トレード手法を固定ルールでバックテストし、悪い結果も含めて全部載せる検証サイト。">
 <link rel="stylesheet" href="style.css">
+<style>
+  .instrument-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 20px 0 4px; }
+  .inst-label { font-weight: 800; letter-spacing: 0.1em; color: var(--gold-bright); font-size: 14px; }
+  .inst-chip {
+    padding: 6px 16px; border-radius: 999px; font-size: 14.5px; color: var(--ink);
+    border: 1px solid rgba(240, 212, 138, 0.4);
+    background: linear-gradient(165deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+    box-shadow: 0 10px 22px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.09);
+  }
+  .inst-chip strong { color: var(--gold-bright); font-size: 16px; margin-right: 4px; }
+</style>
 </head>
 <body>
 <div id="tsparticles"></div>
@@ -31,9 +42,18 @@
     <div class="hero-visual"><canvas id="zdog-hero" width="280" height="280"></canvas></div>
     <div class="hero-copy">
       <h1>「効くと言われる手法」を、<span class="hl">固定ルールで測り直す</span></h1>
-      <p class="lead">このサイトは、トレード手法を後付けの解釈が入らない固定ルールに落とし込み、過去データで測った結果を公開する検証サイトです。良い結果だけでなく、<strong>マイナスだった結果、件数が足りなかった結果、「優位性なし」と判定した手法も、同じ書式で全部載せます。</strong></p>
+      <p class="lead">このサイトは、トレード手法を後付けの解釈が入らない固定ルールに落とし込み、過去データで測った結果を公開する検証サイトです。<strong>対象は金（ゴールド）・銀（シルバー）・WTI原油・ドル円が中心</strong>で、日経225構成銘柄の検証も扱います。良い結果だけでなく、<strong>マイナスだった結果、件数が足りなかった結果、「優位性なし」と判定した手法も、同じ書式で全部載せます。</strong></p>
     </div>
   </section>
+
+  <div class="instrument-bar" aria-label="対象の通貨・銘柄">
+    <span class="inst-label">対象</span>
+    <span class="inst-chip"><strong>金</strong>ゴールドCFD</span>
+    <span class="inst-chip"><strong>銀</strong>シルバーCFD</span>
+    <span class="inst-chip"><strong>WTI</strong>原油CFD</span>
+    <span class="inst-chip"><strong>ドル円</strong>USD/JPY</span>
+    <span class="inst-chip"><strong>日経225</strong>構成銘柄</span>
+  </div>
   <p>検証の約束は3つです。（1）ルールは測る前に固定する。（2）コスト（スプレッド・手数料）を差し引いたネットの数字で報告する。（3）悪い結果から先に書く。数字には常に対象期間と件数を添えます。</p>
 
   <h2 id="articles">検証記事</h2>
