@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>金 日次レンジブレイク（ウィリアムズ型）ロング | 検証ラボ</title>
+<meta name="description" content="ラリー・ウィリアムズのボラティリティ・ブレイクアウトを金で測り直した検証結果。最終形は期待値+$24.38/件・勝率65.9%（44件）、下落・上昇・横ばいの3地合いすべてでプラス。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="tsparticles"></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#toc">目次</a>
+      <a href="index.html#articles">検証記事</a>
+      <a href="roadmap.html">ロードマップ</a>
+      <a href="journal.html">ジャーナル</a>
+      <a href="index.html#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+  <p class="page-updated">最終更新：2026年11月24日</p>
+
+  <h1>金 日次レンジブレイク（ウィリアムズ型）ロング <span class="verdict verdict-watch">監視中</span></h1>
+  <p class="meta">対象：金スポットCFD（米ドル建て）／足型：日次ルール（1分足で判定）／手法：ボラティリティ・ブレイクアウト</p>
+  <p class="lead">前日の値幅から翌日の買い水準を出し、抜けたら買って当日の引けで決済する古典的なブレイクアウトを、金で測り直した記録。ロング側だけが下落・上昇・横ばいの3地合いすべてで残り、損切りと除外日を設計して監視できる形にした。</p>
+  <div class="kpi-row"><div class="kpi"><span class="kpi-v">+$24.38</span><span class="kpi-l">期待値（最終形・1件）</span></div><div class="kpi"><span class="kpi-v">65.9%</span><span class="kpi-l">勝率（最終形）</span></div><div class="kpi"><span class="kpi-v">44件</span><span class="kpi-l">件数（3期間合算）</span></div><div class="kpi"><span class="kpi-v">4.78</span><span class="kpi-l">PF（最終形）</span></div></div>
+
+  <h2><span class="sec-no">1</span>ルール定義</h2>
+  <p>エントリー：前日の値幅（高値−安値）に一定割合を掛けた幅を当日の始値に加えた価格が、その日の買い水準になる。平日の朝以降、最初に買い水準へ触れたところでロング（買い）。先に下側の無効水準へ触れた日は、その日は入らない。</p>
+  <p>決済：当日の終値で決済し、翌日へは持ち越さない。損切りは固定ドル幅（エントリーから一定幅）で置く。</p>
+  <p>除外：年末年始の薄商い期間は対象外とする。これは統計で証明された除外ではなく、「薄い時期は入らない」という運用上の判断で決めた。</p>
+  <p>正確なパラメータと手順（再現できるレベルの定義）は、購入者向けの『手法と検証データの解説』でのみ公開しています。</p>
+  <p><a href="https://note.com/kasegogo/n/ncb8200fe8226"><strong>noteで完全版を読む（¥2,980）</strong></a> ― 導入と結果の要約までは無料で読めます。</p>
+
+  <h2><span class="sec-no">2</span>データと条件</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>条件</th></tr>
+    <tr><td>対象</td><td>金（米ドル建て、OKXの金連動パーペチュアルで代替測定）</td></tr>
+    <tr><td>足型</td><td>日次ルール。水準へのタッチ判定は1分足、日の区切りはJST</td></tr>
+    <tr><td>期間</td><td>下落（2026-09-25〜11-24）・上昇（2025-11-24〜2026-01-24）・横ばい（2026-03-25〜05-23）、各60日</td></tr>
+    <tr><td>コスト</td><td>スプレッド $0.8/oz を差し引いたネット成績</td></tr>
+    <tr><td>エントリー</td><td>平日（JST）、朝の観測開始以降に判定</td></tr>
+  </table>
+  </div>
+
+  <h2><span class="sec-no">3</span>結果（地合い別・最終形）</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>地合い</th><th class="num">件数</th><th class="num">勝率</th><th class="num">期待値/件</th><th class="num">PF</th></tr>
+    <tr><td>下落</td><td class="num">14件</td><td class="num">57.1%</td><td class="num">+$14.88</td><td class="num">2.73</td></tr>
+    <tr><td>上昇</td><td class="num">18件</td><td class="num">77.8%</td><td class="num">+$32.26</td><td class="num">10.83</td></tr>
+    <tr><td>横ばい</td><td class="num">12件</td><td class="num">58.3%</td><td class="num">+$23.63</td><td class="num">3.73</td></tr>
+  </table>
+  </div>
+  <figure class="viz">
+    <figcaption>地合い別の期待値（最終形・1件あたり・ネット、$/oz）</figcaption>
+    <svg viewBox="0 0 720 124" role="img" aria-label="棒グラフ"><line x1="250.0" y1="6" x2="250.0" y2="118" stroke="rgba(240,212,138,0.45)" stroke-width="1.5"/><text x="240" y="30.5" text-anchor="end" font-size="13.5" fill="#ece8dc">下落期間</text><rect x="250.0" y="16.0" width="119.0" height="20" rx="4" fill="#d9a441"/><text x="377.0" y="31.0" font-size="14" font-weight="700" fill="#f0d48a">+14.88</text><text x="240" y="66.5" text-anchor="end" font-size="13.5" fill="#ece8dc">上昇期間</text><rect x="250.0" y="52.0" width="258.1" height="20" rx="4" fill="#d9a441"/><text x="516.1" y="67.0" font-size="14" font-weight="700" fill="#f0d48a">+32.26</text><text x="240" y="102.5" text-anchor="end" font-size="13.5" fill="#ece8dc">横ばい期間</text><rect x="250.0" y="88.0" width="189.0" height="20" rx="4" fill="#d9a441"/><text x="447.0" y="103.0" font-size="14" font-weight="700" fill="#f0d48a">+23.63</text></svg>
+    <p class="viz-note">損切りなしの形でもロングは3期間すべてプラス（+$14.14〜+$18.69）だった。数字は記事内の検証結果より。</p>
+  </figure>
+
+  <p>鏡像のショートは下落期間でのみプラス（+$24.36）で、上昇期間では勝率10.0%・期待値 −$18.24 と壊れたため採用していない。損切りは7形式を比較し、固定ドル幅が「尾を切る」だけでなく「だらだら負ける日を早く切る」効果で期待値そのものを押し上げた（損切りなし +$16.83 → 最終形 +$24.38、年末除外を含む）。</p>
+
+  <h2><span class="sec-no">4</span>悪い点・留保</h2>
+  <p><strong>約定の前提が一番重い。</strong>最終形44件のうち19件（43%）は、朝の観測開始時点で既に買い水準を超えていた。測定値は「水準に逆指値を置いておき、水準価格で約定した」前提で、この19件を朝の始値で入り直すと合算の期待値は +$24.38 → +$17.63（PF 2.97）に下がる。プラスは残るが、実行の形で約3割変わる。</p>
+  <p><strong>件数が少なく、設計と測定が同じデータ。</strong>44件、3つの60日間。未使用の期間での通し検証はまだしていない。係数を変えても結果が崩れない台地であることは確認したが、それでも標本は小さい。</p>
+  <p><strong>下落期間の本体は薄い。</strong>固定の損切りを付けても、下落期間は上位3件の大きな勝ちを除くと期待値がほぼゼロ（−$0.80）。合算の数字は上昇・横ばい期間に支えられている。</p>
+  <p><strong>年末除外は1回分の標本に基づく運用判断。</strong>サンプル内の年末は1回だけで、その4件の大半は1件の大負けである。理屈（流動性の薄さ）とコストの小ささで採用したが、検証で証明された除外ではない。</p>
+  <p><strong>選択の割り引きが要る。</strong>このルールは約140手法のカタログから選ばれ、損切り設計などで約13変種を試した末の形である。その分の割り引きは必要。</p>
+
+  <h2><span class="sec-no">5</span>判定</h2>
+  <div class="verdict-box">
+    <p><strong>判定：監視中（2026-11-24 監視開始）。</strong>3地合いすべてでプラスが揃ったのは、このサイトで測ったブレイク系では初めての形だった。ただし件数の少なさと約定前提の重さから、「確定した優位性」ではなく「追う価値のある仮説」として扱う。実運用ではシグナル通知のみを行い、発注は手動。</p>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: テクニカル分析の書籍リンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本ページの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+    <p>コスト前提：スプレッド $0.8/oz 差引後。前提が変われば結果も変わります。</p>
+  </footer>
+
+</div>
+<script src="particles.bundle.js"></script>
+<script src="fx.js"></script>
+</body>
+</html>
