@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>検証ラボ | 手法を固定ルールで測る検証サイト</title>
+<meta name="description" content="トレード手法を固定ルールでバックテストし、悪い結果も含めて全部載せる検証サイト。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="#articles">検証記事</a>
+      <a href="journal.html">ジャーナル</a>
+      <a href="#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+
+  <h1>「効くと言われる手法」を、固定ルールで測り直す</h1>
+  <p class="lead">このサイトは、トレード手法を後付けの解釈が入らない固定ルールに落とし込み、過去データで測った結果を公開する検証サイトです。良い結果だけでなく、<strong>マイナスだった結果、件数が足りなかった結果、「優位性なし」と判定した手法も、同じ書式で全部載せます。</strong></p>
+  <p>検証の約束は3つです。（1）ルールは測る前に固定する。（2）コスト（スプレッド・手数料）を差し引いたネットの数字で報告する。（3）悪い結果から先に書く。数字には常に対象期間と件数を添えます。</p>
+
+  <h2 id="articles">検証記事</h2>
+  <ul class="card-list">
+    <li class="card">
+      <h3><a href="macd-fade.html">金15分足 MACD行き過ぎの逆張り</a> <span class="verdict verdict-watch">監視中</span></h3>
+      <p class="result-line">期待値 +$8.46/件・勝率 80.7%（57件、スプレッド差引後）</p>
+      <p>指標が通常水準に戻るまで保有する逆張り。これまで測った中では最良の候補だが、後半期間はマイナスで、確定した優位性ではない。</p>
+    </li>
+    <li class="card">
+      <h3><a href="time-of-day.html">時間帯テスト：「必ず上がる・下がる時間帯」はあるか</a> <span class="verdict verdict-reject">却下</span></h3>
+      <p class="result-line">金1時間足・2年（614日）：全時間帯の平均値動きは±$1.15以内</p>
+      <p>有意な時間帯は見つからなかった。直近の偏りは地合いの映り方と判定。</p>
+    </li>
+    <li class="card">
+      <h3><a href="nikkei-macd-gc.html">日経225 MACDゴールデンクロス</a> <span class="verdict verdict-none">優位性なし</span></h3>
+      <p class="result-line">11,417件（2021-11〜2026-11、往復コスト0.1%差引後）</p>
+      <p>固定保有は全日エントリーの基準を上回らず、デッドクロス決済は勝率37.1%・中央値−1.45%。</p>
+    </li>
+    <li class="card">
+      <h3><a href="macd-precursor.html">金15分足 MACD予兆フォロー（順張り）</a> <span class="verdict verdict-watch">監視中</span></h3>
+      <p class="result-line">期待値 +$2.46/件・勝率 64.7%（34件）／イベント日除外では +$4.03・勝率 69.0%（29件）</p>
+      <p>目標水準への到達率97.1%でも勝率とは別物だった、という検証。目標水準で利確することが生命線。</p>
+    </li>
+    <li class="card">
+      <h3><a href="usdjpy-1m.html">ドル円1分足 フェード3ルール（75日検証）</a> <span class="verdict verdict-watch">監視中</span></h3>
+      <p class="result-line">期待値 +0.65〜+3.51銭（ルール・方向別、コスト0.2銭差引後）</p>
+      <p>RSI＋MACDのエピソード逆張り。期待値は1〜3銭と薄い。</p>
+    </li>
+    <li class="card">
+      <h3><a href="tsmom.html">時系列モメンタム（金・WTI・ドル円、25年）</a> <span class="verdict verdict-none">優位性なし</span></h3>
+      <p class="result-line">ブレンド型 年率+4.74%・最大DD −16.4%（買い持ちは年率+8.15%・最大DD −40.7%）</p>
+      <p>優位性は「リターン」ではなく「ドローダウンの浅さ」にだけあった、という検証。</p>
+    </li>
+  </ul>
+
+  <h2 id="journal">モデル運用ジャーナル</h2>
+  <ul class="card-list">
+    <li class="card">
+      <h3><a href="journal.html">モデル運用ジャーナル</a></h3>
+      <p>「監視中」のルールをデモで回すモデル運用の記録と、市場についての考察。半日ごとに更新します。実際の資金での運用実績ではありません（結果はRと％で記録）。</p>
+    </li>
+  </ul>
+
+  <h2 id="levels">節目（エリオット波動の水準）</h2>
+  <p>金・銀・WTI・ドル円について、C波の目標と反転の目安になる水準を記録しています。各ページは準備中です。</p>
+  <div class="level-grid">
+    <div class="card">
+      <h3>金<span class="soon">準備中</span></h3>
+      <p>C波目標と反転の目安</p>
+    </div>
+    <div class="card">
+      <h3>WTI原油<span class="soon">準備中</span></h3>
+      <p>C波目標とレンジの上下限</p>
+    </div>
+    <div class="card">
+      <h3>ドル円<span class="soon">準備中</span></h3>
+      <p>第3波の目標と否定ライン</p>
+    </div>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: 検証で言及した書籍のリンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本サイトの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+    <p>検証に使うコスト前提（スプレッド等）は各記事に明記しています。前提が変われば結果も変わります。</p>
+  </footer>
+
+</div>
+</body>
+</html>

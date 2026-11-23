@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ドル円1分足 フェード3ルール（75日検証） | 検証ラボ</title>
+<meta name="description" content="ドル円1分足のRSI＋MACDエピソード逆張り3ルールを75日データで検証。期待値は+0.65〜+3.51銭と薄い（コスト0.2銭差引後）。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#articles">検証記事</a>
+      <a href="index.html#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+
+  <h1>ドル円1分足 フェード3ルール（75日検証） <span class="verdict verdict-watch">監視中</span></h1>
+  <p class="meta">対象：ドル円（USD/JPY）／足型：1分足／指標：RSI(14)、MACDライン（EMA12−EMA26、確定足）</p>
+  <p class="lead">行き過ぎたエピソードを逆張りする3つのルールを、75日分の1分足で検証した。3ルールとも期待値はプラスだが、1〜3銭と薄い。</p>
+
+  <h2><span class="sec-no">1</span>ルール定義</h2>
+  <p><strong>ルール1（RSI＋MACDの行き過ぎ）：</strong>RSIとMACDがともに行き過ぎの水準にあるエピソードで逆張りする。決済はRSIが通常水準に戻った時点を目安とする。</p>
+  <p><strong>ルール2（往復フェード・大）：</strong>MACDが行き過ぎの水準まで行って通常水準に戻る往復を利用し、極値側で逆張りする。</p>
+  <p><strong>ルール3（往復フェード・小）：</strong>ルール2と同じ構造で、行き過ぎとみなす水準を小さくしたもの。</p>
+  <p>エピソードの扱い：同じ極値圏での連続した発火は1エピソードとして数え、条件が解消されるまで再発火しない。</p>
+  <p>正確なパラメータと手順（再現できるレベルの定義）は、購入者向けの『手法と検証データの解説』でのみ公開しています。</p>
+
+  <h2><span class="sec-no">2</span>データと条件</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>条件</th></tr>
+    <tr><td>対象</td><td>ドル円（USD/JPY）</td></tr>
+    <tr><td>足型</td><td>1分足、確定足のみで判定</td></tr>
+    <tr><td>データ</td><td>HistData、75日分</td></tr>
+    <tr><td>エピソード数</td><td class="num">243 / 296 / 52 / 116件（ルール・方向別）</td></tr>
+    <tr><td>コスト</td><td>0.2銭を差し引いたネット成績</td></tr>
+  </table>
+  </div>
+
+  <h2><span class="sec-no">3</span>結果</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>ルール</th><th class="num">ショート期待値</th><th class="num">ロング期待値</th></tr>
+    <tr><td>ルール1 RSI＋MACDの行き過ぎ</td><td class="num">+0.65銭</td><td class="num">+1.81銭</td></tr>
+    <tr><td>ルール2 往復フェード・大</td><td class="num">+3.51銭</td><td class="num">+2.89銭</td></tr>
+    <tr><td>ルール3 往復フェード・小</td><td class="num">+2.14銭</td><td class="num">+1.23銭</td></tr>
+  </table>
+  </div>
+  <p>3ルールとも両方向でプラスだが、最大でも+3.51銭。往復フェード（ルール2・3）の方がルール1より期待値は大きい。</p>
+
+  <h2><span class="sec-no">4</span>悪い点・留保</h2>
+  <p><strong>期待値が薄い。</strong>1件あたり+0.65〜+3.51銭では、スプレッド前提（0.2銭）が少し悪化するだけで優位性は消える。コスト前提への感度が高いルール群である。</p>
+  <p><strong>分布に負の歪みがある。</strong>中央値が平均を上回る形で、少数の大きな負けが平均を押し下げている。平均だけを見ると実感より楽観的になる。</p>
+  <p><strong>検証は75日分のみ。</strong>エピソード数自体は多い（243/296/52/116件）が、対象期間は75日に限られ、地合いが変わった期間での再現性は未確認。</p>
+
+  <h2><span class="sec-no">5</span>判定</h2>
+  <div class="verdict-box">
+    <p><strong>判定：監視中（薄い優位性）。</strong>3ルールは実通知の対象として監視しているが、優位性は薄く、コスト前提が変われば消える水準。「確定した優位性」ではなく「薄くプラスだった記録」として扱う。実運用ではシグナル通知のみを行い、発注は手動。</p>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: テクニカル分析の書籍リンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本ページの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+    <p>コスト前提：0.2銭差引後。前提が変われば結果も変わります。</p>
+  </footer>
+
+</div>
+</body>
+</html>

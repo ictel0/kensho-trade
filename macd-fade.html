@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>金15分足 MACD行き過ぎの逆張り | 検証ラボ</title>
+<meta name="description" content="金15分足でMACDの行き過ぎを逆張りするルールの検証結果。期待値+$8.46/件・勝率80.7%（57件）。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#articles">検証記事</a>
+      <a href="index.html#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+
+  <h1>金15分足 MACD行き過ぎの逆張り <span class="verdict verdict-watch">監視中</span></h1>
+  <p class="meta">対象：金スポットCFD（米ドル建て）／足型：15分足／指標：MACDライン（EMA12−EMA26、確定足）</p>
+  <p class="lead">MACDが大きく上に伸びたところを逆張りで売り、指標が通常水準に戻るまで持ち続けるルール。これまで測った手法の中では最も数字が良い一方、留保も最も大きい。</p>
+
+  <h2><span class="sec-no">1</span>ルール定義</h2>
+  <p>エントリー：15分足のMACDラインがあらかじめ定めた行き過ぎの水準を超えた足の確定でショート（売り）。</p>
+  <p>決済：MACDラインが通常水準に戻った時点で決済する。固定の時間決済や損切りは置かない（その代わり、保有中の逆行はそのまま受ける設計）。</p>
+  <p>エピソードの扱い：同一の行き過ぎが続いている間は1回のエピソードとして扱い、二重に数えない。</p>
+  <p>正確なパラメータと手順（再現できるレベルの定義）は、購入者向けの『手法と検証データの解説』でのみ公開しています。</p>
+
+  <h2><span class="sec-no">2</span>データと条件</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>条件</th></tr>
+    <tr><td>対象</td><td>金（米ドル建てスポットCFD想定）</td></tr>
+    <tr><td>足型</td><td>15分足、確定足のみで判定</td></tr>
+    <tr><td>件数</td><td class="num">57件</td></tr>
+    <tr><td>コスト</td><td>スプレッド $0.8/oz を差し引いたネット成績</td></tr>
+    <tr><td>決済</td><td>指標が通常水準に戻るまで保有（時間制限なし）</td></tr>
+  </table>
+  </div>
+
+  <h2><span class="sec-no">3</span>結果</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>指標</th><th class="num">値</th></tr>
+    <tr><td>期待値（1件あたり、ネット）</td><td class="num">+$8.46</td></tr>
+    <tr><td>勝率</td><td class="num">80.7%</td></tr>
+    <tr><td>件数</td><td class="num">57件</td></tr>
+    <tr><td>保有期間の中央値</td><td class="num">5.5時間</td></tr>
+    <tr><td>保有中の平均最大逆行（MAE）</td><td class="num">$23.72</td></tr>
+  </table>
+  </div>
+  <p>勝率と期待値はこのサイトで測った手法の中で最良の部類。ただし次の「悪い点・留保」が重い。</p>
+
+  <h2><span class="sec-no">4</span>悪い点・留保</h2>
+  <p><strong>後半期間はマイナス。</strong>サンプルを前半・後半に分けると、後半の期待値はマイナスに転じる。通期の数字は前半の貯金でできている。</p>
+  <p><strong>負けは上昇トレンドの途中に集中する。</strong>負けた局面ではMACDが9以上まで伸び続け、保有が12時間以上に及んだ。つまりこのルールの負け方は「行き過ぎの終わり」ではなく「トレンドの途中を売る」形で、浅い逆行では終わらない。</p>
+  <p><strong>含み損が大きい。</strong>保有中の平均最大逆行は $23.72/oz で、期待値 +$8.46 の約2.8倍。勝率80.7%は、この逆行に耐えることが前提の数字である。</p>
+  <p><strong>鏡像ルールは負ける。</strong>反対側（下方向の行き過ぎに対するロング逆張り）は期待値 −$12.78 と大きくマイナスで、上下非対称。コストを下げても（スプレッド$0.42で再計算）この非対称は解消しなかった。</p>
+
+  <h2><span class="sec-no">5</span>判定</h2>
+  <div class="verdict-box">
+    <p><strong>判定：監視中。</strong>これまで測った中では最良の候補だが、後半期間のマイナスと含み損の大きさから、「確定した優位性」ではなく「追う価値のある仮説」として扱う。実運用ではシグナル通知のみを行い、発注は手動。</p>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: テクニカル分析の書籍リンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本ページの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+    <p>コスト前提：スプレッド $0.8/oz 差引後。前提が変われば結果も変わります。</p>
+  </footer>
+
+</div>
+</body>
+</html>

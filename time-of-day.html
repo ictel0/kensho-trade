@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>時間帯テスト：「必ず上がる・下がる時間帯」はあるか | 検証ラボ</title>
+<meta name="description" content="金1時間足・2年（614日）でJST各時間帯の平均値動きを測った検証。全時間帯±$1.15以内で、有意な時間帯はなかった。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#articles">検証記事</a>
+      <a href="index.html#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+
+  <h1>時間帯テスト：「必ず上がる・下がる時間帯」はあるか <span class="verdict verdict-reject">却下</span></h1>
+  <p class="meta">対象：金・WTI／足型：1時間足／期間：2年（614日）</p>
+  <p class="lead">「この時間帯は上がりやすい」という言説を、2年分の1時間足でそのまま測った。結論は、頼れる時間帯はなかった。</p>
+
+  <h2><span class="sec-no">1</span>ルール定義</h2>
+  <p>仮説：「JSTの特定の時間帯には、方向の偏り（平均リターンが有意にプラス、またはマイナス）が安定して存在する」。</p>
+  <p>測り方：JSTの各時間帯（0時台〜23時台）について、1時間足のリターンの平均を集計する。「有意」の判定は、統計的に有意で、かつサンプルの前半・後半の両方で同じ方向に出ること、とした。</p>
+  <p>正確なパラメータと手順（再現できるレベルの定義）は、購入者向けの『手法と検証データの解説』でのみ公開しています。</p>
+
+  <h2><span class="sec-no">2</span>データと条件</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>条件</th></tr>
+    <tr><td>対象</td><td>金（1時間足）、WTI（1時間足）</td></tr>
+    <tr><td>期間</td><td>2年</td></tr>
+    <tr><td>日数</td><td class="num">614日</td></tr>
+    <tr><td>集計単位</td><td>JST 24時間帯 × 1時間足リターン</td></tr>
+  </table>
+  </div>
+
+  <h2><span class="sec-no">3</span>結果</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>対象</th><th>全時間帯の平均値動きの範囲</th><th>有意な時間帯</th></tr>
+    <tr><td>金（1時間足・2年）</td><td class="num">±$1.15 以内</td><td>なし</td></tr>
+    <tr><td>WTI（1時間足・2年）</td><td class="num">±$0.04 以内</td><td>なし</td></tr>
+  </table>
+  </div>
+  <p>金の全24時間帯は、平均値動きが ±$1.15 の範囲に収まり、「有意かつ前後半で同方向」の条件を満たす時間帯は1つもなかった。WTIに至っては全時間帯が ±$0.04 以内で、ほぼ完全に何もない。</p>
+
+  <h2><span class="sec-no">4</span>悪い点・留保</h2>
+  <p><strong>直近だけを見ると「あるように見える」のが罠。</strong>直近60日の15分足では、夜の時間帯のショートが強く見えた。しかしこの期間はほぼ一方向の下落相場で、2年データでは再現しなかった。つまり時間帯の効果ではなく、その時間帯にたまたま相場が下げ続けた映り方である。</p>
+  <p>この結果は、監視中の夜の時間帯のショート候補についても、長期の裏付けがないことを意味する。時間帯そのものに根拠を求めるのはやめた方がいい、というのがこの検証の実務的な結論。</p>
+  <p>なお、この検証は「平均リターンの偏り」を見たもので、ボラティリティ（値動きの大きさ）の時間帯差まで否定するものではない。</p>
+
+  <h2><span class="sec-no">5</span>判定</h2>
+  <div class="verdict-box">
+    <p><strong>判定：却下。</strong>「必ず上がる・下がる時間帯はない」。時間帯を根拠にした売買ルールは採用しない。</p>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: テクニカル分析の書籍リンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本ページの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+  </footer>
+
+</div>
+</body>
+</html>

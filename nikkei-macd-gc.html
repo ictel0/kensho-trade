@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日経225 MACDゴールデンクロス | 検証ラボ</title>
+<meta name="description" content="日経225構成銘柄のMACDゴールデンクロスを11,417件で検証（2021-11〜2026-11、往復コスト0.1%差引後）。固定保有は基準を上回らず、優位性なしと判定。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#articles">検証記事</a>
+      <a href="index.html#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+
+  <h1>日経225 MACDゴールデンクロス <span class="verdict verdict-none">優位性なし</span></h1>
+  <p class="meta">対象：日経225構成銘柄／足型：日足／期間：2021-11〜2026-11／件数：11,417件</p>
+  <p class="lead">「MACDのゴールデンクロスで買えば上がる」という定番の言説を、5年分・1万件超で測った。結果は、ただ持っているのと変わらなかった。</p>
+
+  <h2><span class="sec-no">1</span>ルール定義</h2>
+  <p>エントリー：日経225構成銘柄の日足で、MACDラインがシグナルラインを上抜け（ゴールデンクロス）した日に買い。</p>
+  <p>決済は2通りを測った。（a）固定期間の保有（複数の保有日数で測定）。（b）デッドクロス（MACDがシグナルを下抜け）で決済。</p>
+  <p>比較基準：同じ銘柄群に「全日エントリー」した場合の成績（＝何も考えずに持ち続ける場合）。これを上回らなければ、クロスを見る意味がない。</p>
+  <p>正確なパラメータと手順（再現できるレベルの定義）は、購入者向けの『手法と検証データの解説』でのみ公開しています。</p>
+
+  <h2><span class="sec-no">2</span>データと条件</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>条件</th></tr>
+    <tr><td>対象</td><td>日経225構成銘柄（現在の構成で遡及）</td></tr>
+    <tr><td>期間</td><td>2021-11-01 〜 2026-11-20</td></tr>
+    <tr><td>イベント件数</td><td class="num">11,417件</td></tr>
+    <tr><td>コスト</td><td>往復 0.1% を差し引いたネット成績</td></tr>
+  </table>
+  </div>
+
+  <h2><span class="sec-no">3</span>結果</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>決済方法</th><th>結果</th></tr>
+    <tr><td>固定期間の保有</td><td>どの保有日数でも、全日エントリーの基準を上回らなかった</td></tr>
+    <tr><td>デッドクロス決済：勝率</td><td class="num">37.1%</td></tr>
+    <tr><td>デッドクロス決済：リターンの中央値</td><td class="num">−1.45%</td></tr>
+  </table>
+  </div>
+  <p>ゴールデンクロスの後に特別な上昇は観測されず、デッドクロスで降りる形は勝率・中央値ともにマイナスだった。</p>
+
+  <h2><span class="sec-no">4</span>悪い点・留保</h2>
+  <p><strong>この検証には上振れ方向のバイアスがある。</strong>構成銘柄は「現在の」日経225で遡っているため、途中で除外された弱い銘柄が抜け落ちている（生存者バイアス）。つまり実態より良く見える条件で測って、それでも優位性がなかった。</p>
+  <p>個別銘柄や他の市場・他のパラメータ（MACDの設定値）まで否定するものではない。ただし「日経225 × 標準設定 × 日足」という最も定番の組み合わせで出なかった、という事実は重い。</p>
+  <p>このサイトの日経225 MACDスクリーナーは、あくまで「今日クロスした銘柄の一覧」という可視化であり、買い材料の根拠ではない。</p>
+
+  <h2><span class="sec-no">5</span>判定</h2>
+  <div class="verdict-box">
+    <p><strong>判定：優位性なし。</strong>MACDゴールデンクロス単体を買いシグナルとして使う根拠は、このデータでは得られなかった。</p>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: テクニカル分析の書籍リンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本ページの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+    <p>コスト前提：往復 0.1% 差引後。前提が変われば結果も変わります。</p>
+  </footer>
+
+</div>
+</body>
+</html>

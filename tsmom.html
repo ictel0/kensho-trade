@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>時系列モメンタム（金・WTI・ドル円、25年） | 検証ラボ</title>
+<meta name="description" content="金・WTI・ドル円の日足で時系列モメンタムを25年検証。年率+4.74%・最大DD−16.4%。買い持ちは年率+8.15%・最大DD−40.7%。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#articles">検証記事</a>
+      <a href="index.html#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+
+  <h1>時系列モメンタム（金・WTI・ドル円、25年） <span class="verdict verdict-none">優位性なし</span></h1>
+  <p class="meta">対象：金・WTI原油・ドル円／足型：日足／期間：2001-09〜2026-11</p>
+  <p class="lead">「上がっているものを買い、下がっているものを売る」という時系列モメンタムを25年で測った。リターンでは買い持ちに負け、残ったのはドローダウンの浅さだけだった。</p>
+
+  <h2><span class="sec-no">1</span>ルール定義</h2>
+  <p>シグナル：各資産について、過去リターン（複数の期間を組み合わせたブレンド）の符号で方向を決める。プラスならロング、マイナスならショート。</p>
+  <p>サイズ調整：あらかじめ定めたボラティリティ目標に合わせてポジションサイズを調整する（ボラが大きい資産ほど小さく持つ）。</p>
+  <p>比較対象：同じ3資産を等ウェイトで買い持ちした場合（リバランスなしの単純比較ではなく、同じ土俵での基準として置く）。</p>
+  <p>正確なパラメータと手順（再現できるレベルの定義）は、購入者向けの『手法と検証データの解説』でのみ公開しています。</p>
+
+  <h2><span class="sec-no">2</span>データと条件</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>条件</th></tr>
+    <tr><td>対象</td><td>金・WTI原油・ドル円（3資産）</td></tr>
+    <tr><td>足型</td><td>日足</td></tr>
+    <tr><td>期間</td><td>2001-09〜2026-11（約25年）</td></tr>
+    <tr><td>ボラティリティ目標</td><td>設定あり（具体的な数値は非公開）</td></tr>
+    <tr><td>ルックバック</td><td>複数期間のブレンド（具体的な期間は非公開）</td></tr>
+  </table>
+  </div>
+
+  <h2><span class="sec-no">3</span>結果</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>指標</th><th class="num">TSMOM（ブレンド型）</th><th class="num">買い持ち（3資産等ウェイト）</th></tr>
+    <tr><td>年率リターン</td><td class="num">+4.74%</td><td class="num">+8.15%</td></tr>
+    <tr><td>シャープレシオ</td><td class="num">0.61</td><td class="num">0.55</td></tr>
+    <tr><td>最大ドローダウン</td><td class="num">−16.4%</td><td class="num">−40.7%</td></tr>
+  </table>
+  </div>
+  <p>シャープレシオはわずかに上回るが、年率リターンでは買い持ちに大きく劣る。差が出たのは最大ドローダウンで、−16.4%対−40.7%と半分以下に収まった。</p>
+
+  <h2><span class="sec-no">4</span>悪い点・留保</h2>
+  <p><strong>リターンでは買い持ちに負ける。</strong>年率+4.74%対+8.15%。25年という長期では、上昇基調の資産を「符号がマイナスだから」とショートする期間の機会損失が積み上がる。</p>
+  <p><strong>優位性はドローダウンの浅さだけ。</strong>このルールの価値は「稼ぐ」ことではなく「大きく負けない」ことに限られる。リターンを目的に採用する根拠にはならない。</p>
+  <p><strong>ルックバック期間への感度が高い。</strong>試した中で最も短いルックバック期間は最悪だった。特定の期間の組み合わせで測った結果であり、組み合わせを変えれば数字は動く。</p>
+  <p><strong>危機の年には機能した。</strong>全バリアントが2022年（株・債券が同時に崩れた年）はプラスだった。平時の劣後と危機時の防御を天秤にかける性質のルールである。</p>
+
+  <h2><span class="sec-no">5</span>判定</h2>
+  <div class="verdict-box">
+    <p><strong>判定：優位性なし（リターン基準）。</strong>リターンを稼ぐ手法としては買い持ちに劣り、優位性は認められない。一方で最大ドローダウンを半分以下に抑えた点は事実として残り、リスク抑制の仕組みとしては参考になる。「儲かる手法」ではなく「守りの部品」として記録する。</p>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: テクニカル分析の書籍リンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本ページの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+    <p>検証条件：2001-09〜2026-11の日足データ。前提が変われば結果も変わります。</p>
+  </footer>
+
+</div>
+</body>
+</html>
