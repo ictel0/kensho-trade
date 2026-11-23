@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>金1分足 長期線下・MACD2度目ピークのショート | 検証ラボ</title>
+<meta name="description" content="金1分足で長期移動平均線の下側にいる間、MACDの2度目のピークを売るルールの検証結果。下落期間で期待値+$8.86/件・勝率52.2%（23件）、上昇期間はエントリー0件。">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="tsparticles"></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="site-name" href="index.html">検証ラボ</a>
+    <p class="site-tagline">手法を固定ルールで測り、悪い結果も含めて全部載せる</p>
+    <nav class="site-nav">
+      <a href="index.html">トップ</a>
+      <a href="index.html#articles">検証記事</a>
+      <a href="index.html#levels">節目</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <p class="pr-note">広告について：このページには広告（アフィリエイトリンク）が含まれる場合があります。リンク経由で申込・購入があった場合、運営者に報酬が発生することがあります。</p>
+
+  <h1>金1分足 長期線下・MACD2度目ピークのショート <span class="verdict verdict-watch">監視中</span></h1>
+  <p class="meta">対象：金スポットCFD（米ドル建て）／足型：1分足／指標：長期移動平均線＋MACDライン（確定足）</p>
+  <p class="lead">長期移動平均線の下側で、MACDの最初の山は見送り、2度目に同じ高さまで戻したところを売るルール。下落・上昇・横ばいの3つの地合いで測り分けた結果、性格は「下落相場専用」とはっきりした。</p>
+  <div class="kpi-row"><div class="kpi"><span class="kpi-v">+$8.86</span><span class="kpi-l">期待値（下落期間・1件）</span></div><div class="kpi"><span class="kpi-v">52.2%</span><span class="kpi-l">勝率（下落期間）</span></div><div class="kpi"><span class="kpi-v">23件</span><span class="kpi-l">件数（下落期間）</span></div><div class="kpi"><span class="kpi-v">3.69</span><span class="kpi-l">PF（下落期間）</span></div></div>
+
+
+  <h2><span class="sec-no">1</span>ルール定義</h2>
+  <p>エントリー：1分足で価格が長期移動平均線の下側にあり、その線が下向きの間だけを対象にする。MACDのプラス圏の山を1度目は「観察のみ」として記録し、マイナス圏を挟んで後の山がその高さに再到達した足の確定でショート（売り）。</p>
+  <p>地合いフィルター：上位足（15分足）の長期線条件と、日足の地合い条件（前日終値と長期線の位置・向き）の両方を通ったときだけ入る。日足の条件が切れている間は、形ができても一切入らない。</p>
+  <p>決済：MACDのマイナス圏の谷についても同じ「2度目」の考え方で決済する。損切りは固定幅（エントリー価格から一定ドル幅）で置く。</p>
+  <p>正確なパラメータと手順（再現できるレベルの定義）は、購入者向けの『手法と検証データの解説』でのみ公開しています。</p>
+
+  <h2><span class="sec-no">2</span>データと条件</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>項目</th><th>条件</th></tr>
+    <tr><td>対象</td><td>金（米ドル建て、OKXの金連動パーペチュアルで代替測定）</td></tr>
+    <tr><td>足型</td><td>1分足、確定足のみで判定</td></tr>
+    <tr><td>期間</td><td>下落（2026-09-25〜11-24）・上昇（2025-11-24〜2026-01-24）・横ばい（2026-03-25〜05-23）、各60日</td></tr>
+    <tr><td>コスト</td><td>スプレッド $0.8/oz を差し引いたネット成績</td></tr>
+    <tr><td>エントリー</td><td>平日（JST）のみ、全時間帯</td></tr>
+  </table>
+  </div>
+
+  <h2><span class="sec-no">3</span>結果（地合い別）</h2>
+  <div class="table-scroll">
+  <table>
+    <tr><th>地合い</th><th class="num">件数</th><th class="num">勝率</th><th class="num">期待値/件</th><th class="num">PF</th></tr>
+    <tr><td>下落</td><td class="num">23件</td><td class="num">52.2%</td><td class="num">+$8.86</td><td class="num">3.69</td></tr>
+    <tr><td>上昇</td><td class="num">0件</td><td class="num">―</td><td class="num">―</td><td class="num">―</td></tr>
+    <tr><td>横ばい</td><td class="num">15件</td><td class="num">33.3%</td><td class="num">−$0.19</td><td class="num">0.97</td></tr>
+  </table>
+  </div>
+  <figure class="viz">
+    <figcaption>地合い別の期待値（1件あたり・ネット、$/oz）</figcaption>
+    <svg viewBox="0 0 720 124" role="img" aria-label="棒グラフ"><line x1="442.0" y1="6" x2="442.0" y2="118" stroke="rgba(240,212,138,0.45)" stroke-width="1.5"/><text x="432" y="30.5" text-anchor="end" font-size="13.5" fill="#ece8dc">下落期間</text><rect x="442.0" y="16.0" width="123.2" height="20" rx="4" fill="#d9a441"/><text x="573.2" y="31.0" text-anchor="start" font-size="14" font-weight="700" fill="#f0d48a">+8.86</text><text x="432" y="66.5" text-anchor="end" font-size="13.5" fill="#ece8dc">横ばい期間</text><rect x="439.4" y="52.0" width="2.6" height="20" rx="1" fill="#e06652"/><text x="431.4" y="67.0" text-anchor="end" font-size="14" font-weight="700" fill="#e06652">-0.19</text><text x="432" y="102.5" text-anchor="end" font-size="13.5" fill="#ece8dc">上昇期間</text><text x="450" y="103.0" text-anchor="start" font-size="13.5" fill="#9a958a">エントリーなし（0件）</text></svg>
+    <p class="viz-note">上昇期間は日足の地合いフィルターが期間を通して切れており、形の有無にかかわらず1件も入らなかった。数字は記事内の検証結果より。</p>
+  </figure>
+
+  <p>下落期間では、上位3件の大きな勝ちを除いても期待値は +$2.18 とプラスを維持した（この種のルールでは珍しい）。時間帯別（下落期間）では全時間帯がプラスで、08〜16時が最も良く、深夜〜早朝（00〜08時）が最も薄かった。</p>
+
+  <h2><span class="sec-no">4</span>悪い点・留保</h2>
+  <p><strong>下落相場でしか働かない。</strong>上昇相場ではフィルターが全てを止め（0件）、横ばいでは期待値ほぼゼロ。使える地合いが限定される代わりに、合わない地合いで撃ち続けることもない、という設計上の割り切りである。</p>
+  <p><strong>件数が少ない。</strong>最終形の下落期間は23件。日足フィルターの計算には約1か月分の過去データが必要で、検証窓の前半は対象外になったためでもある（実運用では過去データが常にあるので、この制約はない）。それでも絶対数は少なく、数字のブレは大きい。</p>
+  <p><strong>勝率は高くない。</strong>下落期間で52.2%。利確を近づける・損切りを広げる・同値撤退を入れる等、勝率を上げる変更は一通り試したが、いずれも期待値との交換になるか、逆に勝率が崩れた。このルールの勝率は構造的に50%前後が天井で、利益は大きな勝ちの側に寄っている。</p>
+  <p><strong>鏡像のロングは全期間でマイナス。</strong>長期線の上側で鏡像の買いルールを組むと、下落・上昇の両期間でマイナスだった。上下非対称はこのルールでも変わらない。</p>
+  <p><strong>試行回数が多い。</strong>この形に至るまでに損切り・決済条件・フィルター等、50を超える変種を同じデータで試している。最終形の数字には、その分の割り引きが必要である。</p>
+
+  <h2><span class="sec-no">5</span>判定</h2>
+  <div class="verdict-box">
+    <p><strong>判定：監視中（2026-11-24 監視開始）。</strong>下落地合いに限れば、このサイトで測った中ではPF・期待値とも最良級の形になった。ただし件数の少なさと試行回数の多さから、「確定した優位性」ではなく「追う価値のある仮説」として扱う。実運用ではシグナル通知のみを行い、発注は手動。</p>
+  </div>
+
+  <!-- AFFILIATE: book-link (未設定: テクニカル分析の書籍リンク枠) -->
+
+  <footer class="site-footer">
+    <p>免責：本ページの検証結果は過去データに基づくもので、将来の成果を保証するものではありません。本サイトは投資助言を行うものではなく、特定の金融商品の売買を推奨するものでもありません。投資の判断はご自身の責任で行ってください。</p>
+    <p>コスト前提：スプレッド $0.8/oz 差引後。前提が変われば結果も変わります。</p>
+  </footer>
+
+</div>
+<script src="particles.bundle.js"></script>
+<script src="fx.js"></script>
+</body>
+</html>
